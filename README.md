@@ -71,14 +71,6 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 
 ### Easy Level
 1. Retrieve the names of all tracks that have more than 1 billion streams.
-
-```SQL
-SELECT *
-FROM spotify
-WHERE stream > 100000000
-```
-
-
 3. List all albums along with their respective artists.
 4. Get the total number of comments for tracks where `licensed = TRUE`.
 5. Find all tracks that belong to the album type `single`.
@@ -94,26 +86,9 @@ WHERE stream > 100000000
 ### Advanced Level
 1. Find the top 3 most-viewed tracks for each artist using window functions.
 2. Write a query to find tracks where the liveness score is above the average.
-3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
-```sql
-WITH cte
-AS
-(SELECT 
-	album,
-	MAX(energy) as highest_energy,
-	MIN(energy) as lowest_energery
-FROM spotify
-GROUP BY 1
-)
-SELECT 
-	album,
-	highest_energy - lowest_energery as energy_diff
-FROM cte
-ORDER BY 2 DESC
-```
-   
-5. Find tracks where the energy-to-liveness ratio is greater than 1.2.
-6. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
+3. Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.
+4. Find tracks where the energy-to-liveness ratio is greater than 1.2.
+5. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
 
 
 Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
