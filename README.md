@@ -121,7 +121,7 @@ Here’s an updated section for your **Spotify Advanced SQL Project and Query Op
 ---
 ## Solution For the Above Questions
 
-Solutions()
+[Solutions](https://github.com/prakashr2000/Spotify_SQL_Project/blob/main/Spotify.sql)
 
 
 ## Query Optimization Technique 
